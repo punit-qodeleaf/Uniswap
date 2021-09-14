@@ -18,4 +18,9 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
  */
 module.exports = {
   solidity: "0.6.6",
+  networks:{
+    localhost:{
+      gas:2*10^1000
+    }
+  }
 };
