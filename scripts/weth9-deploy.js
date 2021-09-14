@@ -14,13 +14,12 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const UniswapV2Pair = await hre.ethers.getContractFactory("UniswapV2Pair");
-  const uniswapV2Pair = await UniswapV2Pair.deploy();
-  console.log('deployed');
+  const WETH9 = await hre.ethers.getContractFactory("WETH9");
+  const weth9 = await WETH9.deploy();
 
-  await uniswapV2Pair.deployed();
+  await weth9.deployed();
 
-  console.log("UniswapV2Pair deployed to:", uniswapV2Pair.address);
+  console.log("WETH9 deployed to:", weth9.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
